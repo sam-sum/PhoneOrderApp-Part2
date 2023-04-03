@@ -29,6 +29,7 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         nameTextField.text = customer.name
         phoneNumTextField.text = customer.phoneNum
@@ -36,6 +37,10 @@ class EditProfileViewController: UIViewController {
         cityTextField.text = customer.city
         postalCodeTextField.text = customer.postalCode
         errorMsgLabel.isHidden = true
+    }
+    
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
     }
     
     @IBAction func onBtnConfirmTouchUpInside(_ sender: UIButton) {

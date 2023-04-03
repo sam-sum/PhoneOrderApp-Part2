@@ -26,6 +26,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onCustomerInfoViewTapped(_:)))
         customerInfoView.addGestureRecognizer(tapGestureRecognizer)
@@ -56,6 +57,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         customerNameLabel.text = customer.name
         customerAddressLabel.text = customer.address
+    }
+    
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -38,6 +38,7 @@ class ConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
 
         priceLabel.text = "$" + String(order.price)
         modelLabel.text = order.model
@@ -46,6 +47,10 @@ class ConfirmationViewController: UIViewController {
         errorMsgLabel.isHidden = true
     }
 
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
+    }
+    
     @IBAction func onBtnConfirmTouchUpInside(_ sender: UIButton) {
         if (!validateInputs()) {
             return

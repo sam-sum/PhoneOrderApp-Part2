@@ -26,8 +26,13 @@ class StoreDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
 
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

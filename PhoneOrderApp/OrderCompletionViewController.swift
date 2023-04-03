@@ -22,8 +22,13 @@ class OrderCompletionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
 
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
+    }
+    
     @IBAction func onBtnBackToProfileTouchUpInside(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 2
     }

@@ -746,7 +746,8 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
         mapView.delegate = self
 
         locationManager.requestWhenInUseAuthorization()
@@ -769,6 +770,10 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
 
     }
 
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
+    }
+    
     // Show the custom pins on the map and make the pins clickable
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
@@ -798,7 +803,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             if let sheet = storeDetailVC.sheetPresentationController {
                 if #available(iOS 16.0, *) {
                     sheet.detents = [.custom { context in
-                        return context.maximumDetentValue * 0.4
+                        return context.maximumDetentValue * 0.45
                     },]
                 } else {
                     // Fallback on earlier versions

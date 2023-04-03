@@ -76,6 +76,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
 
         sizeTextField.inputView = sizePickerView
         colorTextField.inputView = colorPickerView
@@ -98,6 +99,10 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         phoneImageView.image = phoneImage
         brandLabel.text = "Brand: " + brandText
         phonePriceLabel.text = String(phonePrice)
+    }
+    
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

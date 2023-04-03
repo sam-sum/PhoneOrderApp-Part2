@@ -36,3 +36,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func overrideThemeStyle() {
+        if #available(iOS 13.0, *) {
+            let keyWindow = UIApplication
+                .shared
+                .connectedScenes
+                .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                .first { $0.isKeyWindow }
+            if UserDefaults.standard.bool(forKey: SettingsHelper.SettingsKeys.AppTheme) {
+                keyWindow?.overrideUserInterfaceStyle = .dark
+            } else {
+                keyWindow?.overrideUserInterfaceStyle = .light
+            }
+        } else {
+            // iOS 12 or less
+            if UserDefaults.standard.bool(forKey: SettingsHelper.SettingsKeys.AppTheme) {
+                UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = .dark
+            } else {
+                UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = .light
+            }
+        }
+    }
+}

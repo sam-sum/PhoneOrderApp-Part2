@@ -29,6 +29,7 @@ class OrderDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         modelLabel.text = order.model
         storageLabel.text = order.storage
@@ -38,4 +39,7 @@ class OrderDetailViewController: UIViewController {
         phoneImage.image = UIImage(named: "iPhone 14 Pro Max")
     }
 
+    @objc func willEnterForeground() {
+        (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
+    }
 }

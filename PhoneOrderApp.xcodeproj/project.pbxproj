@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */; };
+		06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */; };
+		06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACE029CA3EB900EE327D /* PhoneViewController.swift */; };
+		06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */; };
+		91156D5629D06A5B005BE7A4 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91156D5529D06A5B005BE7A4 /* OrderDetailViewController.swift */; };
+		9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223929C9ACB5000AE4B1 /* AppDelegate.swift */; };
+		9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */; };
+		9194223E29C9ACB5000AE4B1 /* OrderCompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223D29C9ACB5000AE4B1 /* OrderCompletionViewController.swift */; };
+		9194224129C9ACB5000AE4B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194223F29C9ACB5000AE4B1 /* Main.storyboard */; };
+		9194224329C9ACB7000AE4B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9194224229C9ACB7000AE4B1 /* Assets.xcassets */; };
+		9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */; };
+		9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */; };
+		91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91974BD229D04B0F00ED204F /* PhoneOrder.swift */; };
+		91DCDF4529D0744A0066A388 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4429D0744A0066A388 /* Customer.swift */; };
+		91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4829D076370066A388 /* EditProfileViewController.swift */; };
+		E05F68C6D17F8DF7B84EAF1D /* Pods_PhoneOrderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */; };
+		E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */; };
+		E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */; };
+		E3C0D09229CA9A1900D9B2BE /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */; };
+		E3C0D09329CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */; };
+		E3C0D09429CA9A1900D9B2BE /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */; };
+		E3C0D09529CA9A1900D9B2BE /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */; };
+		E3C0D09629CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */; };
+		E3C0D09729CA9A1A00D9B2BE /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */; };
+		E3C0D09829CA9A1A00D9B2BE /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */; };
+		E3C0D09929CA9A1A00D9B2BE /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */; };
+		E3C0D09A29CA9A1A00D9B2BE /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */; };
+		E3C0D09B29CA9A1A00D9B2BE /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */; };
+		E3C0D09C29CA9A1A00D9B2BE /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */; };
+		E3C0D09D29CA9A1A00D9B2BE /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */; };
+		E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */; };
+		E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */; };
+		E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */; };
+		E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		058E8C5070C89EC1E218E3EC /* Pods-PhoneOrderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneOrderApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		06AFACE029CA3EB900EE327D /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
+		91156D5529D06A5B005BE7A4 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		9194223629C9ACB5000AE4B1 /* PhoneOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9194223929C9ACB5000AE4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9194223D29C9ACB5000AE4B1 /* OrderCompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewController.swift; sourceTree = "<group>"; };
+		9194224029C9ACB5000AE4B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9194224229C9ACB7000AE4B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9194224529C9ACB7000AE4B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9194224729C9ACB7000AE4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91974BD229D04B0F00ED204F /* PhoneOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneOrder.swift; sourceTree = "<group>"; };
+		91DCDF4429D0744A0066A388 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		91DCDF4829D076370066A388 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneOrderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
+		E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailsViewController.swift; sourceTree = "<group>"; };
+		E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		E3CF09B829CC1942004AFC06 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		E3CF09B929CC1942004AFC06 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3CF09BA29CC1942004AFC06 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3CF09BB29CC1942004AFC06 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		E3CF09BC29CC1942004AFC06 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		E3CF09BD29CC1943004AFC06 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		E3CF09BE29CC1943004AFC06 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E3CF09BF29CC1943004AFC06 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		E3CF09C029CC1943004AFC06 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		EB6D244F827F08B2AB6CC96C /* Pods-PhoneOrderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneOrderApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9194223329C9ACB5000AE4B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05F68C6D17F8DF7B84EAF1D /* Pods_PhoneOrderApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9194222D29C9ACB5000AE4B1 = {
+			isa = PBXGroup;
+			children = (
+				9194223829C9ACB5000AE4B1 /* PhoneOrderApp */,
+				9194223729C9ACB5000AE4B1 /* Products */,
+				DF755FBD82E24F06AF4DF0AD /* Pods */,
+				F6D7224DCCC3F7A52EC5F48A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9194223729C9ACB5000AE4B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9194223629C9ACB5000AE4B1 /* PhoneOrderApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9194223829C9ACB5000AE4B1 /* PhoneOrderApp */ = {
+			isa = PBXGroup;
+			children = (
+				91974BD229D04B0F00ED204F /* PhoneOrder.swift */,
+				91DCDF4429D0744A0066A388 /* Customer.swift */,
+				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
+				06AFACE029CA3EB900EE327D /* PhoneViewController.swift */,
+				E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */,
+				E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */,
+				91DCDF4829D076370066A388 /* EditProfileViewController.swift */,
+				06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */,
+				06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */,
+				E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */,
+				E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */,
+				9194223D29C9ACB5000AE4B1 /* OrderCompletionViewController.swift */,
+				91156D5529D06A5B005BE7A4 /* OrderDetailViewController.swift */,
+				9194223929C9ACB5000AE4B1 /* AppDelegate.swift */,
+				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
+				9194223F29C9ACB5000AE4B1 /* Main.storyboard */,
+				9194224229C9ACB7000AE4B1 /* Assets.xcassets */,
+				9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */,
+				9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */,
+				9194224729C9ACB7000AE4B1 /* Info.plist */,
+				E3C0D08229CA9A1900D9B2BE /* static */,
+			);
+			path = PhoneOrderApp;
+			sourceTree = "<group>";
+		};
+		DF755FBD82E24F06AF4DF0AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				058E8C5070C89EC1E218E3EC /* Pods-PhoneOrderApp.debug.xcconfig */,
+				EB6D244F827F08B2AB6CC96C /* Pods-PhoneOrderApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3C0D08229CA9A1900D9B2BE /* static */ = {
+			isa = PBXGroup;
+			children = (
+				E3CF09BF29CC1943004AFC06 /* Inter-Black.ttf */,
+				E3CF09BB29CC1942004AFC06 /* Inter-Bold.ttf */,
+				E3CF09B929CC1942004AFC06 /* Inter-ExtraBold.ttf */,
+				E3CF09BE29CC1943004AFC06 /* Inter-ExtraLight.ttf */,
+				E3CF09B829CC1942004AFC06 /* Inter-Light.ttf */,
+				E3CF09BD29CC1943004AFC06 /* Inter-Medium.ttf */,
+				E3CF09C029CC1943004AFC06 /* Inter-Regular.ttf */,
+				E3CF09BA29CC1942004AFC06 /* Inter-SemiBold.ttf */,
+				E3CF09BC29CC1942004AFC06 /* Inter-Thin.ttf */,
+				E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */,
+				E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */,
+				E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */,
+				E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */,
+				E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */,
+				E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */,
+				E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */,
+				E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */,
+				E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */,
+				E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */,
+				E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */,
+				E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */,
+				E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */,
+				E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		F6D7224DCCC3F7A52EC5F48A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9194223529C9ACB5000AE4B1 /* PhoneOrderApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9194224A29C9ACB7000AE4B1 /* Build configuration list for PBXNativeTarget "PhoneOrderApp" */;
+			buildPhases = (
+				30A3FAB0A71353F5FFCC4E13 /* [CP] Check Pods Manifest.lock */,
+				9194223229C9ACB5000AE4B1 /* Sources */,
+				9194223329C9ACB5000AE4B1 /* Frameworks */,
+				9194223429C9ACB5000AE4B1 /* Resources */,
+				8E0D14F1891D16B3D8689E92 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneOrderApp;
+			productName = PhoneOrderApp;
+			productReference = 9194223629C9ACB5000AE4B1 /* PhoneOrderApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9194222E29C9ACB5000AE4B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					9194223529C9ACB5000AE4B1 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9194223129C9ACB5000AE4B1 /* Build configuration list for PBXProject "PhoneOrderApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9194222D29C9ACB5000AE4B1;
+			productRefGroup = 9194223729C9ACB5000AE4B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9194223529C9ACB5000AE4B1 /* PhoneOrderApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9194223429C9ACB5000AE4B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */,
+				E3C0D09229CA9A1900D9B2BE /* Rubik-Bold.ttf in Resources */,
+				9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */,
+				E3C0D09729CA9A1A00D9B2BE /* Rubik-Black.ttf in Resources */,
+				E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */,
+				E3C0D09B29CA9A1A00D9B2BE /* Rubik-BlackItalic.ttf in Resources */,
+				9194224329C9ACB7000AE4B1 /* Assets.xcassets in Resources */,
+				E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */,
+				E3C0D09429CA9A1900D9B2BE /* Rubik-Light.ttf in Resources */,
+				E3C0D09929CA9A1A00D9B2BE /* Rubik-LightItalic.ttf in Resources */,
+				E3C0D09529CA9A1900D9B2BE /* Rubik-Medium.ttf in Resources */,
+				E3C0D09829CA9A1A00D9B2BE /* Rubik-Italic.ttf in Resources */,
+				9194224129C9ACB5000AE4B1 /* Main.storyboard in Resources */,
+				E3C0D09629CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				E3C0D09D29CA9A1A00D9B2BE /* Rubik-Regular.ttf in Resources */,
+				E3C0D09329CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf in Resources */,
+				E3C0D09C29CA9A1A00D9B2BE /* Rubik-ExtraBold.ttf in Resources */,
+				E3C0D09A29CA9A1A00D9B2BE /* Rubik-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30A3FAB0A71353F5FFCC4E13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhoneOrderApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0D14F1891D16B3D8689E92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9194223229C9ACB5000AE4B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9194223E29C9ACB5000AE4B1 /* OrderCompletionViewController.swift in Sources */,
+				91DCDF4529D0744A0066A388 /* Customer.swift in Sources */,
+				06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */,
+				E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */,
+				E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */,
+				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
+				91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */,
+				E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */,
+				91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */,
+				E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */,
+				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
+				91156D5629D06A5B005BE7A4 /* OrderDetailViewController.swift in Sources */,
+				06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */,
+				06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */,
+				9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9194223F29C9ACB5000AE4B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9194224029C9ACB5000AE4B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9194224529C9ACB7000AE4B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9194224829C9ACB7000AE4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9194224929C9ACB7000AE4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9194224B29C9ACB7000AE4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058E8C5070C89EC1E218E3EC /* Pods-PhoneOrderApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.centennial.college.PhoneOrderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9194224C29C9ACB7000AE4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6D244F827F08B2AB6CC96C /* Pods-PhoneOrderApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.centennial.college.PhoneOrderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9194223129C9ACB5000AE4B1 /* Build configuration list for PBXProject "PhoneOrderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9194224829C9ACB7000AE4B1 /* Debug */,
+				9194224929C9ACB7000AE4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9194224A29C9ACB7000AE4B1 /* Build configuration list for PBXNativeTarget "PhoneOrderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9194224B29C9ACB7000AE4B1 /* Debug */,
+				9194224C29C9ACB7000AE4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9194222E29C9ACB5000AE4B1 /* Project object */;
+}

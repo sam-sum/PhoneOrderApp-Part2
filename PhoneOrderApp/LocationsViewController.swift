@@ -24,6 +24,8 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
     fileprivate var locationManager:CLLocationManager = CLLocationManager()
     var storeDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StoreDetailViewController") as! StoreDetailViewController
     
+    private var currentLocation : CLLocationCoordinate2D?
+    
     var appleStores = [
         [
             "name": "Apple Fairview",
@@ -759,6 +761,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
 
         //Zoom to user location
         if let userLocation = locationManager.location?.coordinate {
+            currentLocation = userLocation
             let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 20000, longitudinalMeters: 20000)
             mapView.setRegion(viewRegion, animated: true)
         }
@@ -800,6 +803,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
         //guard let storesAnnotation = view.annotation as? MyPointAnnotation else { return }
         if let storeAnnotation = view.annotation as? MyPointAnnotation {
             storeDetailVC.store.copy(original: storeAnnotation)
+            storeDetailVC.parentVC = self
             if let sheet = storeDetailVC.sheetPresentationController {
                 if #available(iOS 16.0, *) {
                     sheet.detents = [.custom { context in
@@ -844,13 +848,47 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
+    func drawRoute(storeLocation: CLLocationCoordinate2D) {
+        print("draw route on the LocationsVC")
+        if let startLoc = currentLocation {
+            print("start: \(startLoc.latitude) , \(startLoc.longitude)")
+            print("end: \(storeLocation.latitude) , \(storeLocation.longitude)")
+            let sourcePlacemark = MKPlacemark(coordinate: startLoc, addressDictionary: nil)
+            let destinationPlacemark = MKPlacemark(coordinate: storeLocation, addressDictionary: nil)
+            
+            let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+            let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+            
+            let directionRequest = MKDirections.Request()
+            directionRequest.source = sourceMapItem
+            directionRequest.destination = destinationMapItem
+            directionRequest.transportType = .automobile
+            
+            // Calculate the direction
+            let directions = MKDirections(request: directionRequest)
+            directions.calculate {
+                (response, error) -> Void in
+                
+                guard let response = response else {
+                    if let error = error {
+                        print("Error: \(error)")
+                    }
+                    return
+                }
+                let route = response.routes[0]
+                self.mapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
+                let rect = route.polyline.boundingMapRect
+                self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            }
+        }
+    }
+    
     @IBAction func HelpButtonDidClicked(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let helpDocVC = storyboard.instantiateViewController(withIdentifier: "HelpDocVC") as! HelpDocViewController
-        //helpDocVC.openURL = URL(string:"https://www.apple.com")
         let htmlPath = Bundle.main.path(forResource: "LocationsHelp", ofType: "html")
         helpDocVC.openURL = URL(fileURLWithPath: htmlPath!)
-        //self.navigationController?.pushViewController(helpDocVC,animated:true)
+
         if let sheet = helpDocVC.sheetPresentationController {
             sheet.detents = [.large()]
             sheet.prefersGrabberVisible = true

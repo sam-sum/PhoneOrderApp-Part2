@@ -17,6 +17,7 @@ import UIKit
 class StoreDetailViewController: UIViewController {
 
     var store = MyPointAnnotation()
+    var parentVC: LocationsViewController!
     
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
@@ -43,4 +44,7 @@ class StoreDetailViewController: UIViewController {
         lblWebsite.text = store.website
     }
     
+    @IBAction func routeButtonDidCliecked(_ sender: UIButton) {
+        parentVC.drawRoute(storeLocation: store.coordinate)
+    }
 }

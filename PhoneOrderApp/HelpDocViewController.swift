@@ -7,40 +7,40 @@
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
 
-//  StoreDetailViewController.swift
+//  HelpDocViewController.swift
 //  Date: Apr 3, 2023
 //  Version: 1.0
 //
 
 import UIKit
+import WebKit
 
-class StoreDetailViewController: UIViewController {
+class HelpDocViewController: UIViewController, WKUIDelegate {
 
-    var store = MyPointAnnotation()
-    
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblAddress: UILabel!
-    @IBOutlet weak var lblHours: UILabel!
-    @IBOutlet weak var lblPhone: UILabel!
-    @IBOutlet weak var lblWebsite: UILabel!
+    var openURL: URL?
+    @IBOutlet var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
-
+    
     @objc func willEnterForeground() {
         (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
     }
-    
+
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        lblName.text = store.name
-        lblAddress.text = store.address
-        lblHours.text = store.hours
-        lblPhone.text = store.phone
-        lblWebsite.text = store.website
+        let myURL = openURL
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
-    
 }

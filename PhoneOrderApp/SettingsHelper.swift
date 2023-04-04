@@ -7,7 +7,7 @@
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
 
-//  PhoneOrder.swift
+//  SettingsHelper.swift
 //  Date: Apr 3, 2023
 //  Version: 1.0
 //

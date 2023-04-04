@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0671C7BF29DB1D55002C2AC8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0671C7BE29DB1D55002C2AC8 /* Settings.bundle */; };
 		0671C7C129DB207B002C2AC8 /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671C7C029DB207B002C2AC8 /* SettingsHelper.swift */; };
+		0697B79829DB68EA00EA8AC6 /* HelpDocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697B79729DB68EA00EA8AC6 /* HelpDocViewController.swift */; };
+		06A2372F29DB9786007DE456 /* PhoneOrderHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = 06A2372E29DB9786007DE456 /* PhoneOrderHelp.html */; };
+		06A2373129DB9D55007DE456 /* LocationsHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = 06A2373029DB9D55007DE456 /* LocationsHelp.html */; };
+		06A2373329DB9DD5007DE456 /* ProfileHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = 06A2373229DB9DD5007DE456 /* ProfileHelp.html */; };
 		06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */; };
 		06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */; };
 		06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACE029CA3EB900EE327D /* PhoneViewController.swift */; };
@@ -49,6 +53,10 @@
 		058E8C5070C89EC1E218E3EC /* Pods-PhoneOrderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneOrderApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		0671C7BE29DB1D55002C2AC8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0671C7C029DB207B002C2AC8 /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
+		0697B79729DB68EA00EA8AC6 /* HelpDocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDocViewController.swift; sourceTree = "<group>"; };
+		06A2372E29DB9786007DE456 /* PhoneOrderHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PhoneOrderHelp.html; sourceTree = "<group>"; };
+		06A2373029DB9D55007DE456 /* LocationsHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LocationsHelp.html; sourceTree = "<group>"; };
+		06A2373229DB9DD5007DE456 /* ProfileHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ProfileHelp.html; sourceTree = "<group>"; };
 		06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		06AFACE029CA3EB900EE327D /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +138,9 @@
 		9194223829C9ACB5000AE4B1 /* PhoneOrderApp */ = {
 			isa = PBXGroup;
 			children = (
+				06A2372E29DB9786007DE456 /* PhoneOrderHelp.html */,
+				06A2373029DB9D55007DE456 /* LocationsHelp.html */,
+				06A2373229DB9DD5007DE456 /* ProfileHelp.html */,
 				91974BD229D04B0F00ED204F /* PhoneOrder.swift */,
 				91DCDF4429D0744A0066A388 /* Customer.swift */,
 				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
@@ -146,6 +157,7 @@
 				9194223929C9ACB5000AE4B1 /* AppDelegate.swift */,
 				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
 				0671C7C029DB207B002C2AC8 /* SettingsHelper.swift */,
+				0697B79729DB68EA00EA8AC6 /* HelpDocViewController.swift */,
 				9194223F29C9ACB5000AE4B1 /* Main.storyboard */,
 				9194224229C9ACB7000AE4B1 /* Assets.xcassets */,
 				9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */,
@@ -271,12 +283,15 @@
 				E3C0D09729CA9A1A00D9B2BE /* Rubik-Black.ttf in Resources */,
 				E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */,
 				E3C0D09B29CA9A1A00D9B2BE /* Rubik-BlackItalic.ttf in Resources */,
+				06A2373129DB9D55007DE456 /* LocationsHelp.html in Resources */,
 				9194224329C9ACB7000AE4B1 /* Assets.xcassets in Resources */,
 				E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */,
 				E3C0D09429CA9A1900D9B2BE /* Rubik-Light.ttf in Resources */,
 				E3C0D09929CA9A1A00D9B2BE /* Rubik-LightItalic.ttf in Resources */,
 				E3C0D09529CA9A1900D9B2BE /* Rubik-Medium.ttf in Resources */,
+				06A2373329DB9DD5007DE456 /* ProfileHelp.html in Resources */,
 				E3C0D09829CA9A1A00D9B2BE /* Rubik-Italic.ttf in Resources */,
+				06A2372F29DB9786007DE456 /* PhoneOrderHelp.html in Resources */,
 				9194224129C9ACB5000AE4B1 /* Main.storyboard in Resources */,
 				E3C0D09629CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				E3C0D09D29CA9A1A00D9B2BE /* Rubik-Regular.ttf in Resources */,
@@ -347,6 +362,7 @@
 				91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */,
 				E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */,
 				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
+				0697B79829DB68EA00EA8AC6 /* HelpDocViewController.swift in Sources */,
 				91156D5629D06A5B005BE7A4 /* OrderDetailViewController.swift in Sources */,
 				06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */,
 				06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */,

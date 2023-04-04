@@ -52,6 +52,40 @@
             </objects>
             <point key="canvasLocation" x="-1090" y="379"/>
         </scene>
+        <!--Help Doc View Controller-->
+        <scene sceneID="WX8-jN-Ds5">
+            <objects>
+                <viewController storyboardIdentifier="HelpDocVC" id="jSm-Py-VZg" userLabel="Help Doc View Controller" customClass="HelpDocViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="815-MS-eiD">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v64-Ak-AuG">
+                                <rect key="frame" x="20" y="76" width="390" height="822"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Fn-YQ-Bsg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v64-Ak-AuG" firstAttribute="leading" secondItem="815-MS-eiD" secondAttribute="leadingMargin" id="NO6-kv-8VH"/>
+                            <constraint firstItem="v64-Ak-AuG" firstAttribute="trailing" secondItem="815-MS-eiD" secondAttribute="trailingMargin" id="S3B-ww-NMV"/>
+                            <constraint firstItem="v64-Ak-AuG" firstAttribute="bottom" secondItem="7Fn-YQ-Bsg" secondAttribute="bottom" id="vJI-H1-9v2"/>
+                            <constraint firstItem="v64-Ak-AuG" firstAttribute="top" secondItem="7Fn-YQ-Bsg" secondAttribute="top" constant="17" id="wjk-eG-N4i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="v64-Ak-AuG" id="qOG-WY-hm0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="US7-Xy-QGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.88372093023258" y="-1054.5064377682404"/>
+        </scene>
         <!--Phone-->
         <scene sceneID="5o3-Ca-TLt">
             <objects>
@@ -145,7 +179,13 @@
                             <constraint firstItem="VZG-mW-Hzw" firstAttribute="centerX" secondItem="Na7-9v-s11" secondAttribute="centerX" id="nw6-rr-jRq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Phone" id="LXF-Iw-0Q1"/>
+                    <navigationItem key="navigationItem" title="Phone" id="LXF-Iw-0Q1">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="eJv-OC-R3q">
+                            <connections>
+                                <action selector="HelpButtonDidClicked:" destination="lAR-e4-UZt" id="D3P-a3-sbT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="brandSegmentedControl" destination="Na7-9v-s11" id="HOo-Sf-c9d"/>
                         <outlet property="phoneTableView" destination="xD1-Ws-ENQ" id="302-cV-EAs"/>
@@ -377,7 +417,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-GQ-fqW">
-                                <rect key="frame" x="-7" y="52" width="434" height="44"/>
+                                <rect key="frame" x="-12" y="52" width="437" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Confirmation" id="G0R-Ym-Ya1"/>
@@ -425,7 +465,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGv-pz-Hds">
-                                <rect key="frame" x="-8" y="59" width="434" height="44"/>
+                                <rect key="frame" x="-14" y="59" width="437" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Thank You!" id="6AJ-XW-B5j"/>
@@ -507,11 +547,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nx6-1g-YZa">
-                                <rect key="frame" x="-6" y="58" width="426" height="44"/>
+                                <rect key="frame" x="-13" y="58" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile" id="N7U-Ui-hoR"/>
-                                </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edT-0O-PUX">
                                 <rect key="frame" x="40" y="292" width="350" height="1"/>
@@ -610,7 +647,13 @@
                         <viewLayoutGuide key="safeArea" id="0so-jp-J9y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8Mz-66-BCm"/>
+                    <navigationItem key="navigationItem" title="Profile" id="8Mz-66-BCm">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="Zh1-ZD-fl6">
+                            <connections>
+                                <action selector="HelpButtonDidClicked:" destination="TFh-g3-7Sh" id="caT-g4-UsL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="customerAddressLabel" destination="xtc-z2-sUd" id="AaU-MW-33r"/>
                         <outlet property="customerInfoView" destination="kaG-9S-207" id="Oi1-2M-v0h"/>
@@ -916,7 +959,13 @@
                             <constraint firstItem="MP7-Gy-QUl" firstAttribute="centerX" secondItem="CtT-ys-5GI" secondAttribute="centerX" id="vsw-Qp-YTJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Locations" id="ULR-0I-hFO"/>
+                    <navigationItem key="navigationItem" title="Locations" id="ULR-0I-hFO">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="C14-5M-egE">
+                            <connections>
+                                <action selector="HelpButtonDidClicked:" destination="VRY-ZG-8Id" id="MUH-Aj-e5z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="CtT-ys-5GI" id="eCC-7J-5Le"/>
                         <outlet property="segmentedControl" destination="MP7-Gy-QUl" id="9oo-U1-skr"/>

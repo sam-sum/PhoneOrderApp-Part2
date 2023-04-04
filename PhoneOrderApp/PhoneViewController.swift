@@ -1,14 +1,14 @@
 //
 //  MAPD724 W2023
 //  Group 9
-//  Assignment 2 - Frameworks App - Part 1
+//  Assignment 2 - Frameworks App - Part 2
 //  App description: Phone Order App
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
 
 //  PhoneViewController.swift
-//  Date: MAR 26, 2023
+//  Date: Apr 3, 2023
 //  Version: 1.0
 //
 
@@ -74,5 +74,19 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
             phoneDetails.brandText = brandText
             self.navigationController?.pushViewController(phoneDetails, animated: true)
         }
+    }
+    
+    @IBAction func HelpButtonDidClicked(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let helpDocVC = storyboard.instantiateViewController(withIdentifier: "HelpDocVC") as! HelpDocViewController
+        //helpDocVC.openURL = URL(string:"https://www.apple.com")
+        let htmlPath = Bundle.main.path(forResource: "PhoneOrderHelp", ofType: "html")
+        helpDocVC.openURL = URL(fileURLWithPath: htmlPath!)
+        //self.navigationController?.pushViewController(helpDocVC,animated:true)
+        if let sheet = helpDocVC.sheetPresentationController {
+            sheet.detents = [.large()]
+            sheet.prefersGrabberVisible = true
+        }
+        self.present(helpDocVC, animated: true, completion: nil)
     }
 }

@@ -17,6 +17,9 @@
 		06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */; };
 		06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACE029CA3EB900EE327D /* PhoneViewController.swift */; };
 		06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */; };
+		910BB71E29E7D8290013F016 /* CustomerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910BB71D29E7D8290013F016 /* CustomerRepository.swift */; };
+		910BB72029E7E4FC0013F016 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910BB71F29E7E4FC0013F016 /* Phone.swift */; };
+		910BB72229E7E5E40013F016 /* PhoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910BB72129E7E5E40013F016 /* PhoneRepository.swift */; };
 		91156D5629D06A5B005BE7A4 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91156D5529D06A5B005BE7A4 /* OrderDetailViewController.swift */; };
 		9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223929C9ACB5000AE4B1 /* AppDelegate.swift */; };
 		9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */; };
@@ -26,6 +29,8 @@
 		9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */; };
 		9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */; };
 		91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91974BD229D04B0F00ED204F /* PhoneOrder.swift */; };
+		91A7C32129E65EC00059763B /* PhoneOrderAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7C32029E65EC00059763B /* PhoneOrderAppSetting.swift */; };
+		91A7C32329E666170059763B /* PhoneOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7C32229E666170059763B /* PhoneOrderRepository.swift */; };
 		91DCDF4529D0744A0066A388 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4429D0744A0066A388 /* Customer.swift */; };
 		91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4829D076370066A388 /* EditProfileViewController.swift */; };
 		E05F68C6D17F8DF7B84EAF1D /* Pods_PhoneOrderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */; };
@@ -61,6 +66,9 @@
 		06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		06AFACE029CA3EB900EE327D /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
+		910BB71D29E7D8290013F016 /* CustomerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRepository.swift; sourceTree = "<group>"; };
+		910BB71F29E7E4FC0013F016 /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		910BB72129E7E5E40013F016 /* PhoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRepository.swift; sourceTree = "<group>"; };
 		91156D5529D06A5B005BE7A4 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		9194223629C9ACB5000AE4B1 /* PhoneOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9194223929C9ACB5000AE4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +80,8 @@
 		9194224729C9ACB7000AE4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91974BD229D04B0F00ED204F /* PhoneOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneOrder.swift; sourceTree = "<group>"; };
+		91A7C32029E65EC00059763B /* PhoneOrderAppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneOrderAppSetting.swift; sourceTree = "<group>"; };
+		91A7C32229E666170059763B /* PhoneOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneOrderRepository.swift; sourceTree = "<group>"; };
 		91DCDF4429D0744A0066A388 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		91DCDF4829D076370066A388 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneOrderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,8 +151,12 @@
 				06A2372E29DB9786007DE456 /* PhoneOrderHelp.html */,
 				06A2373029DB9D55007DE456 /* LocationsHelp.html */,
 				06A2373229DB9DD5007DE456 /* ProfileHelp.html */,
+				910BB71F29E7E4FC0013F016 /* Phone.swift */,
+				910BB72129E7E5E40013F016 /* PhoneRepository.swift */,
 				91974BD229D04B0F00ED204F /* PhoneOrder.swift */,
+				91A7C32229E666170059763B /* PhoneOrderRepository.swift */,
 				91DCDF4429D0744A0066A388 /* Customer.swift */,
+				910BB71D29E7D8290013F016 /* CustomerRepository.swift */,
 				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
 				06AFACE029CA3EB900EE327D /* PhoneViewController.swift */,
 				E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */,
@@ -158,6 +172,7 @@
 				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
 				0671C7C029DB207B002C2AC8 /* SettingsHelper.swift */,
 				0697B79729DB68EA00EA8AC6 /* HelpDocViewController.swift */,
+				91A7C32029E65EC00059763B /* PhoneOrderAppSetting.swift */,
 				9194223F29C9ACB5000AE4B1 /* Main.storyboard */,
 				9194224229C9ACB7000AE4B1 /* Assets.xcassets */,
 				9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */,
@@ -351,11 +366,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0671C7C129DB207B002C2AC8 /* SettingsHelper.swift in Sources */,
+				910BB71E29E7D8290013F016 /* CustomerRepository.swift in Sources */,
+				91A7C32329E666170059763B /* PhoneOrderRepository.swift in Sources */,
 				9194223E29C9ACB5000AE4B1 /* OrderCompletionViewController.swift in Sources */,
+				910BB72029E7E4FC0013F016 /* Phone.swift in Sources */,
 				91DCDF4529D0744A0066A388 /* Customer.swift in Sources */,
+				910BB72229E7E5E40013F016 /* PhoneRepository.swift in Sources */,
 				06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */,
 				E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */,
 				E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */,
+				91A7C32129E65EC00059763B /* PhoneOrderAppSetting.swift in Sources */,
 				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
 				91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */,
 				E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */,

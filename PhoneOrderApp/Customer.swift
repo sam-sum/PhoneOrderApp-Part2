@@ -15,6 +15,7 @@
 import Foundation
 
 class Customer {
+    public var id = ""
     public var name = ""
     public var phoneNum = ""
     public var address = ""

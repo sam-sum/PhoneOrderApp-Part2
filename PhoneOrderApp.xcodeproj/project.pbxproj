@@ -536,7 +536,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mobile Hub";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -566,7 +566,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mobile Hub";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -36,7 +36,9 @@ class OrderDetailViewController: UIViewController {
         colorLabel.text = order.color
         orderDateLabel.text = "Order Date: \n" + order.createDate
         orderStatusLabel.text = "Order Status: \n" + order.status
-        phoneImage.image = UIImage(named: "iPhone 14 Pro Max")
+        var imageName = order.model + "_" + order.color
+        imageName = imageName.replacingOccurrences(of: " ", with: "")
+        phoneImage.image = UIImage(named: imageName)
     }
 
     @objc func willEnterForeground() {

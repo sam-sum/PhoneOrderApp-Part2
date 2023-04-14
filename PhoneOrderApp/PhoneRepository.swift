@@ -22,10 +22,12 @@ protocol PhoneRepositoryDelegate {
 class PhoneRepository {
     private let delegate: PhoneRepositoryDelegate
     private let firestore: Firestore
-    private static let collectionName = "Phones"
+    private static let rootCollectionName = "Phones"
+    private static let collectionName = "Models"
     private static let fieldModel = "model"
-    private static let fieldImage = "image"
     private static let fieldPrice = "price"
+    private static let fieldColors = "colors"
+    private static let fieldStoragesAndPrices = "storagesAndPrices"
     
     public init(delegate: PhoneRepositoryDelegate) {
         self.delegate = delegate
@@ -35,13 +37,16 @@ class PhoneRepository {
     public func mapToPhone(data: [String : Any]) -> Phone {
         var phone = Phone()
         phone.model = data[PhoneRepository.fieldModel] as! String
-        phone.image = data[PhoneRepository.fieldImage] as! String
         phone.price = data[PhoneRepository.fieldPrice] as! Double
+        phone.colors = data[PhoneRepository.fieldColors] as? [String] ?? [String]()
+        phone.storagesAndPrices = data[PhoneRepository.fieldStoragesAndPrices] as? [String : Double] ?? [String : Double]()
         return phone
     }
     
-    public func getAllPhones() {
+    public func getPhonesByBrand(brand: String) {
         firestore
+            .collection(PhoneRepository.rootCollectionName)
+            .document(brand)
             .collection(PhoneRepository.collectionName)
             .getDocuments { [unowned self] (documents, error) in
                 guard let documents = documents else {

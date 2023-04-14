@@ -36,6 +36,9 @@ class ConfirmationViewController: UIViewController {
         self.order = order
     }
     
+    private var customerRepository: CustomerRepository? = nil
+    private var phoneOrderRepository: PhoneOrderRepository? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
@@ -45,6 +48,8 @@ class ConfirmationViewController: UIViewController {
         colorLabel.text = order.color
         storageLabel.text = order.storage
         errorMsgLabel.isHidden = true
+        customerRepository = CustomerRepository(delegate: self)
+        phoneOrderRepository = PhoneOrderRepository(delegate: self)
     }
 
     @objc func willEnterForeground() {
@@ -72,11 +77,6 @@ class ConfirmationViewController: UIViewController {
         order.status = "Ordered"
         
         saveOrder()
-        
-        if let toVC = storyboard?.instantiateViewController(identifier:"OrderCompletionViewController") as? OrderCompletionViewController {
-            toVC.setOrder(order: order)
-            self.navigationController?.pushViewController(toVC, animated: true)
-        }
     }
     
     private func validateInputs() -> Bool {
@@ -129,18 +129,50 @@ class ConfirmationViewController: UIViewController {
     }
     
     private func saveOrder() {
-        print(order.model)
-        print(order.price)
-        print(order.storage)
-        print(order.color)
-        print(order.customerName)
-        print(order.phoneNum)
-        print(order.address)
-        print(order.city)
-        print(order.postalCode)
-        print(order.creditCardNum)
-        print(order.creditCardExpiryDate)
-        print(order.creditCardCVV)
-        print(order.creditCardHolder)
+        var customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
+        if (customerId == nil) {
+            var customer = Customer()
+            customer.name = order.customerName
+            customer.phoneNum = order.phoneNum
+            customer.address = order.address
+            customer.city = order.city
+            customer.postalCode = order.postalCode
+            customerRepository!.saveCustomer(customer: customer) // save order in the delegate after created new Customer
+        }
+        else {
+            phoneOrderRepository!.savePhoneOrder(customerId: customerId!, order: order)
+        }
+    }
+    
+    private func navigateToOrderCompletionScreen() {
+        if let toVC = storyboard?.instantiateViewController(identifier:"OrderCompletionViewController") as? OrderCompletionViewController {
+            toVC.setOrder(order: order)
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
+    }
+}
+
+extension ConfirmationViewController: CustomerRepositoryDelegate {
+    func onCustomerSaved(customer: Customer) {
+        PhoneOrderAppSetting.sharedPhoneOrderAppSetting.setCustomerId(customerId: customer.id)
+        phoneOrderRepository!.savePhoneOrder(customerId: customer.id, order: order)
+    }
+    
+    func onCustomerReceived(customer: Customer) {
+        return
+    }
+    
+    func onCustomerUpdated(customer: Customer) {
+        return
+    }
+}
+
+extension ConfirmationViewController: PhoneOrderRepositoryDelegate {
+    func onPhoneOrderSaved(order: PhoneOrder) {
+        navigateToOrderCompletionScreen()
+    }
+    
+    func onPhoneOrdersReceived(orders: [PhoneOrder]) {
+        return
     }
 }

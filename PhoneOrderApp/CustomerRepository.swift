@@ -18,6 +18,7 @@ import FirebaseFirestore
 protocol CustomerRepositoryDelegate {
     func onCustomerSaved(customer: Customer)
     func onCustomerReceived(customer: Customer)
+    func onCustomerUpdated(customer: Customer)
 }
 
 class CustomerRepository {
@@ -98,5 +99,6 @@ class CustomerRepository {
             .collection(CustomerRepository.rootCollectionName)
             .document(customer.id)
             .setData(data)
+        delegate.onCustomerUpdated(customer: customer)
     }
 }

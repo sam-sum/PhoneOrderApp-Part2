@@ -20,40 +20,33 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var orderTableView: UITableView!
     @IBOutlet weak var customerNameLabel: UILabel!
     @IBOutlet weak var customerAddressLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    var orders: [PhoneOrder] = []
-    var customer: Customer = Customer()
+    private var orders: [PhoneOrder] = []
+    private var customer: Customer = Customer()
+    private var customerRepository: CustomerRepository? = nil
+    private var phoneOrderRepository: PhoneOrderRepository? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
 
+        customerRepository = CustomerRepository(delegate: self)
+        phoneOrderRepository = PhoneOrderRepository(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
+        if (customerId != nil) {
+            customerRepository?.getCustomer(customerId: customerId!)
+            phoneOrderRepository?.getAllPhoneOrders(customerId: customerId!)
+        }
+    }
+    
+    private func configCustomerInfoUI() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onCustomerInfoViewTapped(_:)))
         customerInfoView.addGestureRecognizer(tapGestureRecognizer)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
-        dateFormatter.locale = Locale(identifier: "ca")
-        var order = PhoneOrder()
-        order.createDate = dateFormatter.string(from: Date())
-        order.status = "Ordered"
-        order.model = "iPhone 14 Pro Max"
-        order.storage = "128GB"
-        order.color = "Deep Purple"
-        orders.append(order)
-        order = PhoneOrder()
-        order.createDate = dateFormatter.string(from: Date())
-        order.status = "Ordered"
-        order.model = "iPhone 14"
-        order.storage = "256GB"
-        order.color = "Gold"
-        orders.append(order)
-        
-        customer.name = "Harry Potter"
-        customer.phoneNum = "4161234567"
-        customer.address = "937 Progress Avenue, Scarborough"
-        customer.city = "Toronto"
-        customer.postalCode = "M1G3T8"
         
         customerNameLabel.text = customer.name
         customerAddressLabel.text = customer.address
@@ -78,7 +71,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.modelLabel.text = order.model
         cell.storageLabel.text = order.storage
         cell.colorLabel.text = order.color
-        cell.phoneImage.image = UIImage(named: "iPhone 14 Pro Max")
+        cell.phoneImage.image = UIImage(named: order.model)
         return cell
     }
     
@@ -109,5 +102,31 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             sheet.prefersGrabberVisible = true
         }
         self.present(helpDocVC, animated: true, completion: nil)
+    }
+}
+
+extension ProfileViewController: CustomerRepositoryDelegate {
+    func onCustomerReceived(customer: Customer) {
+        self.customer = customer
+        configCustomerInfoUI()
+    }
+    
+    func onCustomerSaved(customer: Customer) {
+        return
+    }
+    
+    func onCustomerUpdated(customer: Customer) {
+        return
+    }
+}
+
+extension ProfileViewController: PhoneOrderRepositoryDelegate {
+    func onPhoneOrdersReceived(orders: [PhoneOrder]) {
+        self.orders = orders
+        tableView.reloadData()
+    }
+    
+    func onPhoneOrderSaved(order: PhoneOrder) {
+        return
     }
 }

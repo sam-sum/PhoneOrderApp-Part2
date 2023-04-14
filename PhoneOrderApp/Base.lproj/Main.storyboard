@@ -734,6 +734,7 @@
                         <outlet property="customerInfoView" destination="kaG-9S-207" id="Oi1-2M-v0h"/>
                         <outlet property="customerNameLabel" destination="XGs-wT-yhc" id="KGN-nq-mPB"/>
                         <outlet property="orderTableView" destination="B8k-ir-EW6" id="HVZ-wL-L0b"/>
+                        <outlet property="tableView" destination="B8k-ir-EW6" id="K24-U4-lub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfE-jg-ler" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

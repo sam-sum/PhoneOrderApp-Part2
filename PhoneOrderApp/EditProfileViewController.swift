@@ -27,9 +27,13 @@ class EditProfileViewController: UIViewController {
         self.customer = customer
     }
     
+    private var customerRepository: CustomerRepository? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+        customerRepository = CustomerRepository(delegate: self)
         
         nameTextField.text = customer.name
         phoneNumTextField.text = customer.phoneNum
@@ -54,8 +58,10 @@ class EditProfileViewController: UIViewController {
         customer.city = cityTextField.text!
         customer.postalCode = postalCodeTextField.text!
         
-        saveCustomer()
-        
+        customerRepository?.updateCustomer(customer: customer)
+    }
+    
+    private func navigateToProfileScreen() {
         if let toVC = storyboard?.instantiateViewController(identifier:"ProfileViewController") as? ProfileViewController {
             self.navigationController?.pushViewController(toVC, animated: true)
         }
@@ -96,5 +102,19 @@ class EditProfileViewController: UIViewController {
         print(customer.address)
         print(customer.city)
         print(customer.postalCode)
+    }
+}
+
+extension EditProfileViewController: CustomerRepositoryDelegate {
+    func onCustomerUpdated(customer: Customer) {
+        navigateToProfileScreen()
+    }
+    
+    func onCustomerSaved(customer: Customer) {
+        return
+    }
+    
+    func onCustomerReceived(customer: Customer) {
+        return
     }
 }

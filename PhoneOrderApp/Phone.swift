@@ -16,6 +16,5 @@ import Foundation
 
 class Phone {
     public var model = ""
-    public var image = ""
     public var price = 0.0
 }

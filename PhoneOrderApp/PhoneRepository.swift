@@ -26,6 +26,8 @@ class PhoneRepository {
     private static let collectionName = "Models"
     private static let fieldModel = "model"
     private static let fieldPrice = "price"
+    private static let fieldColors = "colors"
+    private static let fieldStoragesAndPrices = "storagesAndPrices"
     
     public init(delegate: PhoneRepositoryDelegate) {
         self.delegate = delegate
@@ -36,6 +38,8 @@ class PhoneRepository {
         var phone = Phone()
         phone.model = data[PhoneRepository.fieldModel] as! String
         phone.price = data[PhoneRepository.fieldPrice] as! Double
+        phone.colors = data[PhoneRepository.fieldColors] as? [String] ?? [String]()
+        phone.storagesAndPrices = data[PhoneRepository.fieldStoragesAndPrices] as? [String : Double] ?? [String : Double]()
         return phone
     }
     

@@ -67,9 +67,7 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let phoneDetails = storyboard?.instantiateViewController(identifier:"PhoneDetailsViewController") as? PhoneDetailsViewController {
             let phone = phones[indexPath.row]
-            phoneDetails.phoneImage = UIImage(named: phone.model)!
-            phoneDetails.phoneName = phone.model
-            phoneDetails.phonePrice = phone.price
+            phoneDetails.phone = phone
             phoneDetails.brandText = brandText
             self.navigationController?.pushViewController(phoneDetails, animated: true)
         }

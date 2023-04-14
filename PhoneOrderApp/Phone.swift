@@ -17,4 +17,6 @@ import Foundation
 class Phone {
     public var model = ""
     public var price = 0.0
+    public var colors = [String]()
+    public var storagesAndPrices = [String : Double]()
 }

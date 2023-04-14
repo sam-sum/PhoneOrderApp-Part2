@@ -71,7 +71,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.modelLabel.text = order.model
         cell.storageLabel.text = order.storage
         cell.colorLabel.text = order.color
-        cell.phoneImage.image = UIImage(named: order.model)
+        var imageName = order.model + "_" + order.color
+        imageName = imageName.replacingOccurrences(of: " ", with: "")
+        cell.phoneImage.image = UIImage(named: imageName)
         return cell
     }
     

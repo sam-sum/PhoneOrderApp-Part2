@@ -29,8 +29,12 @@ class OrderCompletionViewController: UIViewController {
         (UIApplication.shared.delegate as? AppDelegate)?.overrideThemeStyle()
     }
     
-    @IBAction func onBtnBackToProfileTouchUpInside(_ sender: UIButton) {
-        self.tabBarController?.selectedIndex = 2
+    @IBAction func onBtnBackToPhoneListTouchUpInside(_ sender: UIButton) {
+        if let phoneViewController = storyboard?.instantiateViewController(withIdentifier: "PhoneViewController")
+            as? PhoneViewController {
+            //self.navigationController?.pushViewController(phoneViewController, animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
 

@@ -23,6 +23,7 @@ class OrderCompletionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     @objc func willEnterForeground() {

@@ -87,7 +87,7 @@ class ConfirmationViewController: UIViewController {
             errorMsgLabel.isHidden = false
             return false
         }
-        if (phoneNumTextField.text == "") {
+        if (phoneNumTextField.text == "" || !isAllDigits(s: phoneNumTextField.text!)) {
             errorMsgLabel.text = "Error: phone number is invalid"
             errorMsgLabel.isHidden = false
             return false
@@ -107,7 +107,7 @@ class ConfirmationViewController: UIViewController {
             errorMsgLabel.isHidden = false
             return false
         }
-        if (creditCardNumTextField.text == "") {
+        if (creditCardNumTextField.text == "" || !isAllDigits(s: creditCardNumTextField.text!)) {
             errorMsgLabel.text = "Error: credit card number is invalid"
             errorMsgLabel.isHidden = false
             return false
@@ -117,7 +117,7 @@ class ConfirmationViewController: UIViewController {
             errorMsgLabel.isHidden = false
             return false
         }
-        if (creditCardCVVTextField.text == "") {
+        if (creditCardCVVTextField.text == "" || !isAllDigits(s: creditCardCVVTextField.text!) || creditCardCVVTextField.text!.count > 3) {
             errorMsgLabel.text = "Error: CVV is invalid"
             errorMsgLabel.isHidden = false
             return false
@@ -126,6 +126,15 @@ class ConfirmationViewController: UIViewController {
             errorMsgLabel.text = "Error: credit card holder name is invalid"
             errorMsgLabel.isHidden = false
             return false
+        }
+        return true
+    }
+    
+    private func isAllDigits(s: String) -> Bool {
+        for c in s {
+            if (!c.isNumber) {
+                return false
+            }
         }
         return true
     }

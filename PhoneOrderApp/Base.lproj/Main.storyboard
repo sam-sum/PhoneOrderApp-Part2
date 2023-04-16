@@ -200,11 +200,11 @@
         <scene sceneID="gvQ-Ib-qEw">
             <objects>
                 <viewController storyboardIdentifier="PhoneDetailsViewController" id="6zu-f6-NCC" userLabel="Phone Details" customClass="PhoneDetailsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="OE0-aK-v0M">
+                    <view key="view" contentMode="scaleToFill" id="OE0-aK-v0M">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImK-sG-hWo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImK-sG-hWo">
                                 <rect key="frame" x="0.0" y="59" width="430" height="873"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsC-wN-eOc">
@@ -276,7 +276,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-cC-dIb" userLabel="phoneLabel">
-                                                <rect key="frame" x="127.66666666666669" y="52" width="175" height="24"/>
+                                                <rect key="frame" x="130" y="52" width="170.33333333333337" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="cW3-Il-gZC"/>
                                                 </constraints>
@@ -386,141 +386,220 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU HAVE SELECTED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap4-9F-nH4">
-                                <rect key="frame" x="24" y="120" width="179" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGISTER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJn-eT-qhR">
-                                <rect key="frame" x="20" y="268" width="87" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 PRO MAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-hI-Mnq" userLabel="Model">
-                                <rect key="frame" x="32" y="144" width="159" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="256 GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iE-N3-xB2" userLabel="Size">
-                                <rect key="frame" x="32" y="192" width="59.333333333333343" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEEP PURPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-2O-OPp" userLabel="Color">
-                                <rect key="frame" x="32" y="168" width="186" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-Jl-R33" userLabel="Name">
-                                <rect key="frame" x="74.828564491752331" y="296" width="280.00000000000023" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHc-lp-OEb" userLabel="CreditCard">
-                                <rect key="frame" x="74.402955301850398" y="532" width="280" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bol-nX-wH0" userLabel="CardHolderName">
-                                <rect key="frame" x="73.891620998223516" y="632" width="279.99999999999977" height="33.999999999999943"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-K0-zTJ" userLabel="PhoneNumebr">
-                                <rect key="frame" x="74.828564491752331" y="346" width="280.00000000000023" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-KC-kn0">
-                                <rect key="frame" x="74.828564491752331" y="396" width="279.99999999999977" height="33.999999999999829"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-Ob-zZq">
-                                <rect key="frame" x="224.63614720655369" y="446" width="130.00000000000091" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjC-PA-XS5" userLabel="PostalCode">
-                                <rect key="frame" x="74.636147206553687" y="446" width="130" height="34.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiry Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-Oy-MW1" userLabel="ExpiryDate">
-                                <rect key="frame" x="73.891620998223516" y="582" width="129.99999999999977" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV (3-digits)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7n-on-eJQ" userLabel="CVV">
-                                <rect key="frame" x="223.89162099822261" y="582" width="130" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAYMENT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-wh-6De">
-                                <rect key="frame" x="20" y="503" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4k-Pm-F32">
-                                <rect key="frame" x="67.454284268687843" y="735" width="295.00000000000068" height="34.999999999999886"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="CONFIRM">
-                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="onBtnConfirmTouchUpInside:" destination="Ez1-LX-n11" eventType="touchUpInside" id="aqe-fb-aR7"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRZ-A4-utG">
-                                <rect key="frame" x="67.454284268687843" y="706" width="295.00000000000068" height="20.999999999999943"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-GQ-fqW">
-                                <rect key="frame" x="-4" y="53" width="437" height="44"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2B-46-13q">
+                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-xz-oBs">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="795"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU HAVE SELECTED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap4-9F-nH4">
+                                                <rect key="frame" x="24" y="16" width="179" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 PRO MAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-hI-Mnq" userLabel="Model">
+                                                <rect key="frame" x="32" y="44" width="159" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DEEP PURPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-2O-OPp" userLabel="Color">
+                                                <rect key="frame" x="32" y="69" width="186" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="256 GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iE-N3-xB2" userLabel="Size">
+                                                <rect key="frame" x="32" y="92" width="59.333333333333343" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$1549" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSJ-0W-uUY" userLabel="Price">
+                                                <rect key="frame" x="310" y="16" width="100" height="21"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJn-eT-qhR">
+                                                <rect key="frame" x="20" y="168" width="87" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-Jl-R33" userLabel="Name">
+                                                <rect key="frame" x="75" y="196" width="280" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="Ebk-8v-dXv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-K0-zTJ" userLabel="PhoneNumebr">
+                                                <rect key="frame" x="75" y="246" width="280" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="T1H-WD-xQt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-KC-kn0">
+                                                <rect key="frame" x="75" y="296" width="280" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="MEv-63-ixW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjC-PA-XS5" userLabel="PostalCode">
+                                                <rect key="frame" x="75" y="346" width="130" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Uf9-oi-tYk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-Ob-zZq">
+                                                <rect key="frame" x="225" y="346" width="130" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Rnr-H3-jaF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-wh-6De">
+                                                <rect key="frame" x="20" y="404" width="83" height="20"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wHc-lp-OEb" userLabel="CreditCard">
+                                                <rect key="frame" x="75" y="432" width="280" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="8CK-Ur-5H3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiry Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-Oy-MW1" userLabel="ExpiryDate">
+                                                <rect key="frame" x="75" y="482" width="130" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="MBB-Ze-EuA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV (3-digits)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7n-on-eJQ" userLabel="CVV">
+                                                <rect key="frame" x="225" y="482" width="130" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="ZSq-1L-4VD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bol-nX-wH0" userLabel="CardHolderName">
+                                                <rect key="frame" x="75" y="532" width="280" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="31l-x5-Ac6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Error:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRZ-A4-utG">
+                                                <rect key="frame" x="67.454284268687843" y="606" width="295.00000000000068" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4k-Pm-F32">
+                                                <rect key="frame" x="67.666666666666686" y="635" width="295" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="295" id="C6X-W3-ehC"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="CONFIRM">
+                                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onBtnConfirmTouchUpInside:" destination="Ez1-LX-n11" eventType="touchUpInside" id="aqe-fb-aR7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bMR-KC-kn0" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="1Fj-gc-LpI"/>
+                                            <constraint firstItem="bMR-KC-kn0" firstAttribute="top" secondItem="KdC-K0-zTJ" secondAttribute="bottom" constant="16" id="1um-JJ-arL"/>
+                                            <constraint firstItem="wHc-lp-OEb" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="4v4-2Y-PH9"/>
+                                            <constraint firstItem="a15-hI-Mnq" firstAttribute="leading" secondItem="z4B-xz-oBs" secondAttribute="leading" constant="32" id="58e-4N-6Dp"/>
+                                            <constraint firstItem="ap4-9F-nH4" firstAttribute="leading" secondItem="z4B-xz-oBs" secondAttribute="leading" constant="24" id="5Vp-uo-0KO"/>
+                                            <constraint firstItem="KdC-K0-zTJ" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="6iA-Bx-PUb"/>
+                                            <constraint firstItem="zSJ-0W-uUY" firstAttribute="top" secondItem="z4B-xz-oBs" secondAttribute="top" constant="16" id="8DI-c4-6nD"/>
+                                            <constraint firstItem="rRZ-A4-utG" firstAttribute="top" secondItem="bol-nX-wH0" secondAttribute="bottom" constant="40" id="Axg-WU-ZVt"/>
+                                            <constraint firstItem="1iE-N3-xB2" firstAttribute="top" secondItem="jNU-2O-OPp" secondAttribute="bottom" constant="3" id="D8y-vK-Zcy"/>
+                                            <constraint firstItem="wHc-lp-OEb" firstAttribute="top" secondItem="FUd-wh-6De" secondAttribute="bottom" constant="8" id="EYN-6f-w2y"/>
+                                            <constraint firstItem="FUd-wh-6De" firstAttribute="leading" secondItem="MJn-eT-qhR" secondAttribute="leading" id="FkY-f4-iee"/>
+                                            <constraint firstItem="MJn-eT-qhR" firstAttribute="leading" secondItem="z4B-xz-oBs" secondAttribute="leading" constant="20" symbolic="YES" id="GYj-16-U3Q"/>
+                                            <constraint firstItem="zjC-PA-XS5" firstAttribute="top" secondItem="bMR-KC-kn0" secondAttribute="bottom" constant="16.000000000000171" id="IcU-Wf-99L"/>
+                                            <constraint firstItem="H4k-Pm-F32" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="PVI-G9-u01"/>
+                                            <constraint firstItem="MJn-eT-qhR" firstAttribute="top" secondItem="1iE-N3-xB2" secondAttribute="bottom" constant="56" id="UT3-Q1-1Xe"/>
+                                            <constraint firstItem="a15-hI-Mnq" firstAttribute="top" secondItem="ap4-9F-nH4" secondAttribute="bottom" constant="8" id="VWv-KJ-tj0"/>
+                                            <constraint firstItem="H4k-Pm-F32" firstAttribute="top" secondItem="rRZ-A4-utG" secondAttribute="bottom" constant="8" symbolic="YES" id="WbX-Jc-54b"/>
+                                            <constraint firstItem="ePV-Oy-MW1" firstAttribute="top" secondItem="wHc-lp-OEb" secondAttribute="bottom" constant="16" id="XND-7S-BcD"/>
+                                            <constraint firstItem="aTi-Jl-R33" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="YP2-QI-Wyu"/>
+                                            <constraint firstItem="jNU-2O-OPp" firstAttribute="leading" secondItem="z4B-xz-oBs" secondAttribute="leading" constant="32" id="ZvP-bS-E1v"/>
+                                            <constraint firstItem="KdC-K0-zTJ" firstAttribute="top" secondItem="aTi-Jl-R33" secondAttribute="bottom" constant="16" id="dbB-gs-zVq"/>
+                                            <constraint firstItem="bol-nX-wH0" firstAttribute="top" secondItem="ePV-Oy-MW1" secondAttribute="bottom" constant="16" id="fTZ-EJ-XHe"/>
+                                            <constraint firstItem="L7n-on-eJQ" firstAttribute="top" secondItem="wHc-lp-OEb" secondAttribute="bottom" constant="16" id="g1t-Pv-u9x"/>
+                                            <constraint firstItem="ap4-9F-nH4" firstAttribute="top" secondItem="z4B-xz-oBs" secondAttribute="top" constant="16" id="g8c-LR-2Th"/>
+                                            <constraint firstItem="zjC-PA-XS5" firstAttribute="leading" secondItem="bMR-KC-kn0" secondAttribute="leading" id="hPp-vv-V7S"/>
+                                            <constraint firstItem="1iE-N3-xB2" firstAttribute="leading" secondItem="z4B-xz-oBs" secondAttribute="leading" constant="32" id="hss-nl-wAK"/>
+                                            <constraint firstItem="bol-nX-wH0" firstAttribute="centerX" secondItem="z4B-xz-oBs" secondAttribute="centerX" id="kS8-M7-rAA"/>
+                                            <constraint firstAttribute="trailing" secondItem="zSJ-0W-uUY" secondAttribute="trailing" constant="20" symbolic="YES" id="nUI-EW-lyM"/>
+                                            <constraint firstItem="L7n-on-eJQ" firstAttribute="trailing" secondItem="wHc-lp-OEb" secondAttribute="trailing" id="nZf-WR-H3V"/>
+                                            <constraint firstItem="wHc-lp-OEb" firstAttribute="width" secondItem="bMR-KC-kn0" secondAttribute="width" id="nbR-Dq-Ex8"/>
+                                            <constraint firstItem="aTi-Jl-R33" firstAttribute="top" secondItem="MJn-eT-qhR" secondAttribute="bottom" constant="8" id="pcZ-Ys-44P"/>
+                                            <constraint firstItem="jNU-2O-OPp" firstAttribute="top" secondItem="a15-hI-Mnq" secondAttribute="bottom" constant="5" id="qbM-bn-1rc"/>
+                                            <constraint firstItem="NJg-Ob-zZq" firstAttribute="top" secondItem="bMR-KC-kn0" secondAttribute="bottom" constant="16.000000000000171" id="sf7-cv-4Ex"/>
+                                            <constraint firstItem="FUd-wh-6De" firstAttribute="top" secondItem="zjC-PA-XS5" secondAttribute="bottom" constant="24" id="uyf-hm-Ydi"/>
+                                            <constraint firstItem="NJg-Ob-zZq" firstAttribute="trailing" secondItem="bMR-KC-kn0" secondAttribute="trailing" id="vXA-WY-Nbn"/>
+                                            <constraint firstItem="ePV-Oy-MW1" firstAttribute="leading" secondItem="wHc-lp-OEb" secondAttribute="leading" id="xNi-Ua-Qc5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z4B-xz-oBs" firstAttribute="centerX" secondItem="i2B-46-13q" secondAttribute="centerX" id="2Wt-0u-h4Y"/>
+                                    <constraint firstItem="z4B-xz-oBs" firstAttribute="top" secondItem="i2B-46-13q" secondAttribute="top" id="69D-S1-rVR"/>
+                                    <constraint firstItem="z4B-xz-oBs" firstAttribute="leading" secondItem="i2B-46-13q" secondAttribute="leading" id="Jmz-6d-BZy"/>
+                                    <constraint firstAttribute="trailing" secondItem="z4B-xz-oBs" secondAttribute="trailing" id="Rob-y8-yol"/>
+                                    <constraint firstAttribute="bottom" secondItem="z4B-xz-oBs" secondAttribute="bottom" constant="-71" id="fhf-0T-SIt"/>
+                                </constraints>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-GQ-fqW">
+                                <rect key="frame" x="0.0" y="60" width="430" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Confirmation" id="G0R-Ym-Ya1"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1549" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSJ-0W-uUY" userLabel="Price">
-                                <rect key="frame" x="310" y="119" width="100" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x3D-72-FVT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x3D-72-FVT" firstAttribute="top" secondItem="x4e-GQ-fqW" secondAttribute="top" constant="50" id="1ei-LI-maF"/>
+                            <constraint firstItem="x3D-72-FVT" firstAttribute="top" secondItem="x4e-GQ-fqW" secondAttribute="top" constant="43" id="1ei-LI-maF"/>
+                            <constraint firstItem="z4B-xz-oBs" firstAttribute="centerX" secondItem="x3D-72-FVT" secondAttribute="centerX" id="A3Q-rP-nKF"/>
+                            <constraint firstItem="i2B-46-13q" firstAttribute="leading" secondItem="x3D-72-FVT" secondAttribute="leading" id="KPd-M8-o2W"/>
+                            <constraint firstItem="z4B-xz-oBs" firstAttribute="centerY" secondItem="x3D-72-FVT" secondAttribute="centerY" id="RrL-a0-y2y"/>
+                            <constraint firstItem="x4e-GQ-fqW" firstAttribute="leading" secondItem="x3D-72-FVT" secondAttribute="leading" id="SbU-vI-sPE"/>
+                            <constraint firstAttribute="bottom" secondItem="i2B-46-13q" secondAttribute="bottom" id="UKq-Ol-kI2"/>
                             <constraint firstItem="x4e-GQ-fqW" firstAttribute="centerX" secondItem="x3D-72-FVT" secondAttribute="centerX" id="apk-uH-5dt"/>
+                            <constraint firstItem="z4B-xz-oBs" firstAttribute="top" secondItem="x4e-GQ-fqW" secondAttribute="bottom" constant="-7" id="pNs-sI-YMy"/>
+                            <constraint firstItem="i2B-46-13q" firstAttribute="centerX" secondItem="x3D-72-FVT" secondAttribute="centerX" id="tTY-z7-0Pl"/>
+                            <constraint firstItem="i2B-46-13q" firstAttribute="trailing" secondItem="x3D-72-FVT" secondAttribute="trailing" id="vbz-Dj-ljG"/>
+                            <constraint firstItem="i2B-46-13q" firstAttribute="top" secondItem="x3D-72-FVT" secondAttribute="top" id="zPB-xn-ZO0"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -554,43 +633,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGv-pz-Hds">
-                                <rect key="frame" x="-15" y="59" width="438" height="44"/>
+                                <rect key="frame" x="-15" y="59" width="437" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Thank You!" id="6AJ-XW-B5j"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="iH5-7t-Tua">
-                                <rect key="frame" x="56.301012341307796" y="302.00000000000011" width="314.99999999999955" height="202.00000000000006"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-Da-eyT">
+                                <rect key="frame" x="0.0" y="137" width="430" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR ORDER IS CONFIRMED. THANK YOU FOR YOUR PURCHASE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-id-lQV">
-                                <rect key="frame" x="58.875947033120156" y="177" width="312" height="41.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRODUCT WILL BE DELIVERED WITHIN 7-14 DAYS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-Ge-xKI">
-                                <rect key="frame" x="72.600751108557233" y="523" width="282" height="41.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-eX-6Qc">
-                                <rect key="frame" x="66.600751108557233" y="689" width="295" height="35.000000000000085"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="BACK TO PHONE LIST PAGE">
-                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="onBtnBackToPhoneListTouchUpInside:" destination="4em-8v-0KT" eventType="touchUpInside" id="x9o-J3-Ndp"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5N-9f-fTV">
+                                        <rect key="frame" x="36.472021407837019" y="20" width="354.99999999999909" height="587.00000000000023"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR ORDER IS CONFIRMED. THANK YOU FOR YOUR PURCHASE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-id-lQV">
+                                                <rect key="frame" x="22.574934691812359" y="20" width="312" height="41.000000000000114"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="iH5-7t-Tua">
+                                                <rect key="frame" x="20" y="145.00000000000011" width="314.99999999999955" height="202.00000000000006"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRODUCT WILL BE DELIVERED WITHIN 7-14 DAYS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-Ge-xKI">
+                                                <rect key="frame" x="36.299738767249437" y="366" width="282" height="41.000000000000114"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-eX-6Qc">
+                                                <rect key="frame" x="30.299738767249437" y="532" width="295" height="35.000000000000085"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="BACK TO PHONE LIST PAGE">
+                                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onBtnBackToPhoneListTouchUpInside:" destination="4em-8v-0KT" eventType="touchUpInside" id="x9o-J3-Ndp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="q3N-ZA-zrx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="X2m-IO-Bzn"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H9L-To-muS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -605,7 +699,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="TFh-g3-7Sh" customClass="ProfileViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKz-mh-0Sf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaG-9S-207">
@@ -636,7 +730,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nx6-1g-YZa">
-                                <rect key="frame" x="-14" y="58" width="425" height="44"/>
+                                <rect key="frame" x="-14" y="58" width="441" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edT-0O-PUX">

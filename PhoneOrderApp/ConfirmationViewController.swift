@@ -36,7 +36,6 @@ class ConfirmationViewController: UIViewController {
         self.order = order
     }
     
-    
     private var customerRepository: CustomerRepository? = nil
     private var phoneOrderRepository: PhoneOrderRepository? = nil
     
@@ -51,9 +50,6 @@ class ConfirmationViewController: UIViewController {
         errorMsgLabel.isHidden = true
         customerRepository = CustomerRepository(delegate: self)
         phoneOrderRepository = PhoneOrderRepository(delegate: self)
-        
-        creditCardNumTextField.allTargets.suffix(16)
-        
         
         loadExistingCustomerInfo()
     }

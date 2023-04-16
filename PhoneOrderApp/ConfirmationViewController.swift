@@ -50,6 +50,8 @@ class ConfirmationViewController: UIViewController {
         errorMsgLabel.isHidden = true
         customerRepository = CustomerRepository(delegate: self)
         phoneOrderRepository = PhoneOrderRepository(delegate: self)
+        
+        loadExistingCustomerInfo()
     }
 
     @objc func willEnterForeground() {
@@ -129,7 +131,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     private func saveOrder() {
-        var customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
+        let customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
         if (customerId == nil) {
             var customer = Customer()
             customer.name = order.customerName
@@ -142,6 +144,22 @@ class ConfirmationViewController: UIViewController {
         else {
             phoneOrderRepository!.savePhoneOrder(customerId: customerId!, order: order)
         }
+    }
+    
+    private func loadExistingCustomerInfo() {
+        let customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
+        if (customerId == nil) {
+            return
+        }
+        customerRepository!.getCustomer(customerId: customerId!)
+    }
+    
+    private func fillCustomerInfoTextFields(customer: Customer) {
+        customerNameTextField.text = customer.name
+        phoneNumTextField.text = customer.phoneNum
+        addressTextField.text = customer.address
+        cityTextField.text = customer.city
+        postalCodeTextField.text = customer.postalCode
     }
     
     private func navigateToOrderCompletionScreen() {
@@ -159,7 +177,7 @@ extension ConfirmationViewController: CustomerRepositoryDelegate {
     }
     
     func onCustomerReceived(customer: Customer) {
-        return
+        fillCustomerInfoTextFields(customer: customer)
     }
     
     func onCustomerUpdated(customer: Customer) {

@@ -1,7 +1,7 @@
 //
 //  MAPD724 W2023
 //  Group 9
-//  Assignment 2 - Frameworks App - Part 1
+//  Assignment 2 - Frameworks App - Part 2
 //  App description: Phone Order App
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
@@ -107,17 +107,17 @@ class ConfirmationViewController: UIViewController {
             errorMsgLabel.isHidden = false
             return false
         }
-        if (creditCardNumTextField.text == "" || !isAllDigits(s: creditCardNumTextField.text!)) {
+        if (creditCardNumTextField.text == "" || !isAllDigits(s: creditCardNumTextField.text!) || creditCardNumTextField.text!.count != 16) {
             errorMsgLabel.text = "Error: credit card number is invalid"
             errorMsgLabel.isHidden = false
             return false
         }
-        if (creditCardExpiryDateTextField.text == "") {
+        if (creditCardExpiryDateTextField.text == "" || creditCardExpiryDateTextField.text!.count != 4) {
             errorMsgLabel.text = "Error: expiry date is invalid"
             errorMsgLabel.isHidden = false
             return false
         }
-        if (creditCardCVVTextField.text == "" || !isAllDigits(s: creditCardCVVTextField.text!) || creditCardCVVTextField.text!.count > 3) {
+        if (creditCardCVVTextField.text == "" || !isAllDigits(s: creditCardCVVTextField.text!) || creditCardCVVTextField.text!.count != 3) {
             errorMsgLabel.text = "Error: CVV is invalid"
             errorMsgLabel.isHidden = false
             return false
@@ -142,7 +142,7 @@ class ConfirmationViewController: UIViewController {
     private func saveOrder() {
         let customerId = PhoneOrderAppSetting.sharedPhoneOrderAppSetting.getCustomerId()
         if (customerId == nil) {
-            var customer = Customer()
+            let customer = Customer()
             customer.name = order.customerName
             customer.phoneNum = order.phoneNum
             customer.address = order.address

@@ -147,7 +147,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
-                                <rect key="frame" x="65" y="131" width="300" height="32"/>
+                                <rect key="frame" x="39.891287375798129" y="131" width="350.00000000000011" height="32"/>
                                 <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Apple"/>
@@ -168,7 +168,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Na7-9v-s11" firstAttribute="top" secondItem="VZG-mW-Hzw" secondAttribute="bottom" constant="28" id="0vF-ni-hhe"/>
-                            <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="65" id="4bC-Nm-LIO"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="39.891287375798129" id="4bC-Nm-LIO"/>
                             <constraint firstItem="mBz-WA-KLa" firstAttribute="bottom" secondItem="xD1-Ws-ENQ" secondAttribute="bottom" constant="14" id="6Gh-Lw-rQ7"/>
                             <constraint firstItem="VZG-mW-Hzw" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" constant="-20" id="6dN-SE-6t7"/>
                             <constraint firstItem="Na7-9v-s11" firstAttribute="centerX" secondItem="mBz-WA-KLa" secondAttribute="centerX" id="B7z-kU-1h7"/>
@@ -1119,14 +1119,14 @@
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Gy-QUl">
                                 <rect key="frame" x="40" y="112" width="350" height="32"/>
-                                <color key="backgroundColor" red="0.86396181579999998" green="0.25294351580000002" blue="0.349065721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Apple"/>
                                     <segment title="Google"/>
                                     <segment title="Samsumg"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" red="0.92469751830000002" green="0.94589835410000001" blue="0.97401815650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="VRY-ZG-8Id" eventType="valueChanged" id="wyO-1H-FEj"/>
                                 </connections>
